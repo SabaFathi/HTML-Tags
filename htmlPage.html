@@ -9,35 +9,35 @@
         <p align="center">This is a paragraph.
            Each paragraph can has some attributes.
            <br/>
-           Here I use "br" tag to write in new line.
+           Here I use &lt;br&gt; tag to write in new line.
            <br/>
-           NOTE: tag "p" and tag "hr" and tags "h1-h6" are "block level element"
-            so they can not use in each other.
+           NOTE: tag &lt;p&gt; and tag &lt;hr&gt; and tags &lt;h1-h6&gt; are 
+           "block level element"so they can not use in each other.
            <br/>
            <br/>
-           <b>tag "b" stands for "bold" text.</b>
+           <b>tag &lt;b&gt; stands for "bold" text.</b>
            <br/>
-           <strong>tag "strong" stands for "strong" text. 
-               it's similar to tag "b"
+           <strong>tag &lt;strong&gt; stands for "strong" text. 
+               it's similar to tag &lt;b&gt;
            </strong>
            <br/>
-           <i>tag "i" stands for "italic" text.</i>
+           <i>tag &lt;i&gt; stands for "italic" text.</i>
            <br/>
-           <em>tag "em" stands for "important" text. 
-               its appearance is like tag "i"
+           <em>tag &lt;em&gt; stands for "important" text. 
+               its appearance is like tag &lt;i&gt;
            </em>
            <br/>
-           <small>tag "small" stands for "small" text.</small>
+           <small>tag &lt;small&gt; stands for "small" text.</small>
            <br/>
            text<sub>sub</sub><sup>sup</sup>    text<sup>sup</sup><sub>sub</sub>
            <br/>
-           text<sub>sub</sub>... tag "sub" stands for "subscripted" text.
+           text<sub>sub</sub>... tag &lt;sub&gt; stands for "subscripted" text.
            <br/>
-           text<sup>sup</sup>... tag "sup" stands for "superscripted" text.
+           text<sup>sup</sup>... tag &lt;sup&gt; stands for "superscripted" text.
            <br/>
-           <ins>tag "ins" stands for "inserted" text.</ins>
+           <ins>tag &lt;ins&gt; stands for "inserted" text.</ins>
            <br/>
-           <del>tag "del" stands for "deleted" text</del>
+           <del>tag &lt;del&gt; stands for "deleted" text</del>
            <br/>
         </p>
         <br/><hr/>
@@ -83,13 +83,77 @@
         </ul>
         <hr/>
         <!-- table -->
-        <table>
-            <!-- TODO -->
+        <table border="5" align="left">
+            <thead>
+                <th bgcolor="red">table headers</th>
+                <th>table header a</th>
+                <th>table header b</th>
+                <th>table header c</th>    
+                <th>table header d</th>
+            </thead>
+            <tbody>
+                <tr><!-- tag <th> stands for "table row" -->
+                    <th>table header 1</th>
+                    <td>table data 1-a</td>
+                    <td>table data 1-b</td>
+                    <td>table data 1-c</td>
+                    <td>table data 1-d</td>
+                </tr>
+                <tr>
+                    <th>table header 2</th>
+                    <td>table data 2-a</td>
+                    <td colspan="2">table data 2-b,c "colspan=2"</td>
+                    <td>table data 2-d</td>
+                </tr>
+                <tr>
+                    <th>table header 3</th>
+                    <td>table data 3-a</td>
+                    <td rowspan="2">table data 3,4-b</td>
+                    <td>table data 3-c</td>
+                    <td>table data 3-d</td>
+                </tr>
+                <tr>
+                    <th>table header 4</th>
+                    <td>table data 4-a</td>
+                    <td>table data 4-c</td>
+                    <td>table data 4-d</td>
+                </tr>
+            </tbody>
+            <tfoot></tfoot>
         </table>
         <hr/>
         <!-- form -->
-        <form>
-            <!-- TODO -->
+        <form action="/formData.php" method="post">
+             <!--attribute "method" = "get" or "post" -->
+            user name: 
+            <input type="text" name="name" value="" placeholder="user name"/>
+            <br/>
+            password: 
+            <input type="password" name="password" value="" placeholder="password"/>
+            <br/>
+            gender: 
+            <input type="radio" name="gender" value="male"/>male 
+            <input type="radio" name="gender" value="female"/>female 
+            <br/>
+            interested color: 
+            <input type="checkbox" name="color" value="red"/>red 
+            <input type="checkbox" name="color" value="green"/>green 
+            <input type="checkbox" name="color" value="blue"/>blue 
+            <br/>
+            email: 
+            <input type="email" name="email" value="" 
+                   placeholder="name@subdomain.domain"/>
+            <!--is the address true in network definitions?-->
+            <br/>
+            age: 
+            <input type="number" name="age" value="" placeholder="age"/>
+            <br/>
+            tel:
+            <input type="tel" name="tel" value="" placeholder="tel"/>
+            <br/>
+            <input type="reset" name="resetKey" value="reset form"/>
+            <input type="submit" name="submitKey" value="submit data"/>
         </form>
+        <hr/>
     </body>
 </html>
